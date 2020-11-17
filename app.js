@@ -7,6 +7,11 @@ const lastMsg = document.querySelector('.lastMessage');
 // Event Listener
 btn.addEventListener('click', (e) => {
 	e.preventDefault();
-	lastMsg.innerHTML = input.value;
-	input.value = '';
+	if(input.value === ''){
+		errorMsg.classList.toggle('hide');
+		setTimeout(function(){errorMsg.classList.toggle('hide')}, 2000);
+	}else{
+		lastMsg.innerHTML = input.value;
+		input.value = '';
+	}
 });
