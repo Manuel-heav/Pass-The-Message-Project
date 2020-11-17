@@ -15,3 +15,12 @@ btn.addEventListener('click', (e) => {
 		input.value = '';
 	}
 });
+
+function EnterKey(){
+	input.addEventListener("keyup", (e) =>{
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    btn.click();
+  }
+})};
+
